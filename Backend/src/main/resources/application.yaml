@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: courier-management
+
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    test-connection: false
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION:86400000}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+management:
+  health:
+    mail:
+      enabled: false
+
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics
+
+  endpoint:
+    health:
+      show-details: always
