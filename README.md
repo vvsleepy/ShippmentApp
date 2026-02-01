@@ -92,7 +92,7 @@ src/main/java/com/shippmentapp/
 git clone <repository-url>
 
 # Navigate to project root
-cd CourierManagement
+cd ShippmentApp
 
 # Start all services (App, MongoDB, Kafka, Zookeeper)
 docker-compose up -d
